@@ -22,6 +22,7 @@ docker run -p 8000:8000 backend
 python -m venv .venv
 ```
 Затем нужно активировать виртуальное окружение:
+
 Для Windows:
 ```bash
 .venv\Scripts\activate
