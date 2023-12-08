@@ -31,6 +31,12 @@ python -m venv .venv
 ```bash
 source .venv/bin/activate
 ```
+
+Теперь нужно установить библиотеки зависимостей из файла `requirements.txt`:
+```bash
+pip install -r requirements.txt
+```
+
 После этого примените миграции к базе данных:
 ```bash
 python manage.py migrate
