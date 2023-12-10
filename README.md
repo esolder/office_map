@@ -60,7 +60,9 @@ python manage.py createsuperuser
 
 ### API endpoints
 `plans/` [`GET`, `POST`] - список планов помещений.
+
 `workplaces/` [`GET`, `POST`] - список всех рабочих мест на всех планах.
+
 `plans/<id плана>/` [`GET`, `PUT`, `PATCH`, `DELETE`] - объект плана со списком всех его рабочих мест.
 Список полей:
 - `id` - уникальный идентификатор плана;
