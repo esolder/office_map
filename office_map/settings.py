@@ -46,6 +46,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ORIGIN_WHITELIST: list[str] = env.list(
+    'DJANGO_CORS_ORIGIN_WHITELIST',
+    ['http://127.0.0.1:5173', 'http://localhost:5173'],
+)
+
+
 ROOT_URLCONF = 'office_map.urls'
 
 REST_FRAMEWORK = {
