@@ -1,10 +1,13 @@
-from rest_framework.viewsets import ModelViewSet
+from django.contrib.auth.models import User
+from rest_framework.mixins import ListModelMixin, RetrieveModelMixin
+from rest_framework.viewsets import ModelViewSet, GenericViewSet
 
 from .models import Plan, Workplace
 from .serializers import (
     PlanSerializer,
     PlanListSerializer,
     WorkplaceSerializer,
+    UserSerializer,
 )
 
 
@@ -20,3 +23,8 @@ class PlanViewSet(ModelViewSet):
 class WorkplaceViewSet(ModelViewSet):
     queryset = Workplace.objects.all()
     serializer_class = WorkplaceSerializer
+
+
+class UserViewSet(ListModelMixin, RetrieveModelMixin, GenericViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
